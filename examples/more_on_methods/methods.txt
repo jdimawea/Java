@@ -1,0 +1,39 @@
+Method
+-a funciton that belongs to a class
+-can do things like print, get, set, or delete information.
+-name methods after verbs.
+
+Defining Terms
+// Method
+-modifiers, return type, method name, method body.
+    -modifiers: 
+        -private: Only the class in which it is declared can see and access the method. This is the most restrictive access level
+        -protected: Protected access gives subclasses a chance to use the method, while preventing a nonrelated class from trying to use it.
+        -public: Every class everwhere has access to the method. 
+
+    -return type: 
+        -int, String, double, boolean, or void.
+    
+    -method name: 
+        -use lowerCamelCase. 
+        -examples:
+            -getValue(), setValue(), greet(), addToList();, createGreeting()
+
+    -parameter list:
+        -Whatever is enclosed in the opening and closing parenthesis are called parameters
+
+    -method body:
+        -The method body defines the instructions that are to be executed when the method is called. 
+        -Code between {}
+    
+    -method type: 
+        -static defines the method to be a class method that is invoked without reference to an object. 
+
+    -static modifier: 
+        -This modifier defines the method as a class method, which means it can be invoked without reference to a particular object.
+        -Example:
+            public class MathTest {
+                public static void main(String[] args) {
+                    System.out.println(Math.sin(25));
+                }
+            }

@@ -1,0 +1,41 @@
+// this: refers to the current object within the context of an instance method or constructor.
+// current: object is the simple object whose method or constructoris being called. 
+// One case in which you MUST use *this: if one of your parameter variables shares the same name as one of your member variables. For example:
+    class Person {
+    private int age;
+    private String name;
+    public Person(int age, String name) {
+        this.age = age;
+        this.name = name;
+        
+        // this will not set the attribute value. 'age' is a local variable in the constructor method and its value is the very first argument.
+        age = age 
+    }
+}
+
+
+// ---------------------------------  Constructor Overloading  ---------------------------------------
+// one of other uses of the *this keyword is when you have overloaded your constructor, but don't want to have to write any repetitive code. 
+// Example 
+public class Person {
+    private int age;
+    private int cmHeight;
+    private String name;
+    public Person() {
+        this(20, "John Doe", 171);
+    }
+    
+    public Person(int age, String name, int cmHeight) {
+        this.age = age;
+        this.name = name;
+        this.cmHeight = cmHeight;
+    }
+
+
+// ------------------------------------  Object Superclass ---------------------------------
+// The *Object class is considered a superclass because it is at the top of the class Hierarchy. To access them, you have to use *this keyword.
+// Some of the most used methods from the *Object class are:
+    -.getClass(): returns a Class object that represents the object's current class.
+    -.equals(): compares two objects for equality and returns a boolean.
+    -.toString(): return a string representation of the object.
+
