@@ -1,0 +1,3 @@
+Static can only use static 
+Class methods cannot access instance variables or instance methods directly. 
+Class methods cannot use this keyword as there is no instance for this to refer to. 
