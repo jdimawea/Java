@@ -15,7 +15,7 @@ public class BankAccount {
     }
 
     // Class Member (static) that has the number of account created thus far
-    public static int accountCount() {
+    public static int getNumberOfAccounts() {
         return numberOfAccounts;
     }
 
@@ -64,8 +64,8 @@ public class BankAccount {
     }
 
     // Class Member (static) that tacks the total amount of money stored in every account created
-    public static double totalMoney() {
-        return total;
+    public static void totalMoney() {
+        System.out.println("Total Money: " + total);
     }
 
     // Class Member to check info

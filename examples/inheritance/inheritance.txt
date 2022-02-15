@@ -1,0 +1,7 @@
+Inheritance
+    One of the most important features of OOP.
+    Prevents u sfrom having to rewrite a significant amout of code 
+    Able to use classes written by other people without changing that class 
+
+Overriding Method:
+    You can change or extend the method of a superclass by just writing a method

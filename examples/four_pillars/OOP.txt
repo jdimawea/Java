@@ -1,0 +1,92 @@
+Benefits of using OOP:
+    1. Implements D.R.Y (Dont Repeat Yourself) code 
+    2. Makes our applicaiton scalable.
+    3. Makes our code reusable.
+    4.Makes our applications easily maintainable
+
+Encapsulation:
+    Encapsulation in Java involves controlling access to properties or methods with access modifiers and limiting control to the inner scope when necessary.  
+    Example: 
+        public class CoffeeMaker {
+            protected int maxVolumeOz;
+            protected String milk;
+            
+            public CoffeeMaker(int maxVolumeOz) {
+                this.maxVolumeOz = maxVolumeOz;
+            }
+                        
+            public int getMaxVolumeOz() {
+                return this.maxVolumeOz;
+            
+            public int getMaxServings() {
+                return this.maxVolumeOz / 8;
+            }
+            
+            public void brew(String beans) {
+                System.out.println("Brewing coffee");
+            }
+        }
+
+Inheritance:
+    Inheritance is the idea that we pass along attributes and methods from one class into a "sub-class" or child class, and not have to re-write the code to make it work. 
+    Using the key word "super" will call methods        
+    Example: 
+        class CappuccinoMaker extends CoffeeMaker {
+        
+            public CappuccinoMaker(int maxVolumeOz) {
+                super(maxVolumeOz);
+                this.milk = "whole";
+            }
+            
+            public void makeCappuccino(String beans) {
+                super.brew(beans);
+                System.out.println("Smooth.");
+            }
+        }
+
+Polymorphism:
+    Means "many forms" 
+    a Child class can have a different version of a method than the Parent class.
+    Example: 
+        class CappuccinoMaker extends CoffeeMaker {
+    
+            public CappuccinoMaker() {
+                this.maxVolumeOz = 16;
+                this.milk = whole;
+            }
+                        
+            public void brew(String beans) {
+            super.brew(beans);
+                System.out.println("Frothy!!!");
+            }
+                        
+            public void clean(){
+                System.out.println("Cleaning the froth!");
+            }
+        }
+
+Abstraction:
+    Is an extension of Encapsulation, and we can hide attributes or methods that a Barista doesn't need to know about. 
+    Example: 
+        class Barista {
+            
+            private String name;
+            private CoffeeMaker;
+            
+            public Barista(String name) {
+                this.name = name;
+                this.cafe = new CoffeeMaker(40);
+            }
+            
+            public void makeCoffee() {
+                this.cafe.brew();
+            }
+        }
+
+
+
+
+
+
+
+
